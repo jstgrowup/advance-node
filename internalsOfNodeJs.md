@@ -6,5 +6,6 @@ JS Code==> NodeJS ==> V8(30%) JS and
 - lib folder in the node src is kinof the JS world
 - src directory is kindof the libuv and V8
 - internalBinding('crypto') this is the way how the node js kindof communicate with the C++ functions
+- https://github.com/nodejs/node/blob/main/lib/internal/crypto/pbkdf2.js
 - JS code ==> Node JS side lib forder in node repo ==> process.binding==> V8(main logic) ==> Node C++ side (src directory)
 -
