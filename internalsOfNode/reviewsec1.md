@@ -1,0 +1,1 @@
+node index.js ==> Do we still have work to do? Look at timers,OS tasks,threadpool ==>run setTimeouts,setInterval ==> Run callbacks for any OS tasks or threadpool tasks that are done (this is 99% of our code) ==> Pause and wait for stuff to happen ==> Run any 'setImmediate' functions ==> Handle close events ==> step 2

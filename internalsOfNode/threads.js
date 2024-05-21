@@ -1,3 +1,4 @@
+// ## Is Node single threaded?
 const crypto = require("crypto");
 const start = Date.now();
 crypto.pbkdf2("a", "b", 100000, 512, "sha512", () => {
