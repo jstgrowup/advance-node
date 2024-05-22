@@ -1,12 +1,14 @@
+const crypto = require("crypto");
+
 const express = require("express");
 const app = express();
-function doWork(duration) {
-  const start = Date.now();
-  while (Date.now() - start < duration) {}
-}
+
 app.get("/", (req, res) => {
-  doWork(5000);
-  //   lets say if there is two machines hitting the smae api its gonna take a long time to process thats where clustering comes into picture
-  res.send("Hi there");
+  crypto.pbkdf2("a", "b", 100000, 512, "sha512", () => {
+    res.send("Hi there");
+  });
+});
+app.get("/fast", (req, res) => {
+  res.send("this was fast");
 });
 app.listen(3000);
