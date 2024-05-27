@@ -26,7 +26,7 @@ test("clicking login starts the oauth flow", async () => {
   await page.click(".right a");
   // https://pptr.dev/api/puppeteer.page.click
   const url = await page.url();
-  //   Now we never quite know what list
+  // Now we never quite know what list
   // of emails are going to appear on the screen here
   // and we also don't necessarily know
   // that this thing is always going to say
