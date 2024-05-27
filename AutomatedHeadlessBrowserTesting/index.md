@@ -34,3 +34,9 @@ Puppeteer -->(Starts up chromium)-->Browser-->(represents an open browser window
 4. Use a DOM selector to retrieve the content of an element
 5. Write assertion to make sure content is correct
 6. repeat point 1
+
+## Issues while
+
+## OAuth flow of our app
+
+-
