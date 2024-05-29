@@ -59,19 +59,7 @@ test("clicking login starts the oauth flow", async () => {
 });
 test("when signed in shows logout button", async () => {
   const id = "664f84ac7a923449a80e4ec2";
-  const Buffer = require("safe-buffer").Buffer;
-  const sessionObject = {
-    passport: {
-      user: id,
-    },
-  };
-  const sessionString = Buffer.from(JSON.stringify(sessionObject)).toString(
-    "base64"
-  );
-  const Keygrip = require("keygrip");
-  const keys = require("../config/keys");
-  const keygrip = new Keygrip([keys.cookieKey]);
-  const sig = keygrip.sign("session=" + sessionString);
+
   await page.setCookie({ name: "session", value: sessionString });
   await page.setCookie({ name: "session.sig", value: sig });
   await page.goto("localhost:3000");

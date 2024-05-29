@@ -42,3 +42,4 @@ Puppeteer -->(Starts up chromium)-->Browser-->(represents an open browser window
 - we will simulate two steps
 - server sets cookie on users browser that identifies them
 - all future requests include cookie data that indentifies this user
+-
