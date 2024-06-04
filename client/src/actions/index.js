@@ -14,8 +14,8 @@ export const handleToken = (token) => async (dispatch) => {
 };
 
 export const submitBlog = (values, history) => async (dispatch) => {
+  // before ceration of tbe blog i want eh Image to be uploaded
   const res = await axios.post("/api/blogs", values);
-
   history.push("/blogs");
   dispatch({ type: FETCH_BLOG, payload: res.data });
 };

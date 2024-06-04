@@ -1,8 +1,11 @@
+require("dotenv").config();
+
 module.exports = {
-  googleClientID:
-    "70265989829-0t7m7ce5crs6scqd3t0t6g7pv83ncaii.apps.googleusercontent.com",
+  googleClientID: process.env.GOOGLE_CLIENT_ID,
+
   googleClientSecret: "8mkniDQOqacXtlRD3gA4n2az",
-  mongoURI:
-    "mongodb+srv://nodeadvance:nodeadvance@cluster0.nnuecms.mongodb.net/nodeadvance?retryWrites=true&w=majority",
+  mongoURI: process.env.MONGO_URI,
   cookieKey: "123123123",
+  accessKeyId: process.env.ACCESS_KEY,
+  secretAccessKey: process.env.SECRET_ACCESS_KEY,
 };

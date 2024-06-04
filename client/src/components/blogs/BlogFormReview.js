@@ -42,7 +42,8 @@ class BlogFormReview extends Component {
   onSubmit(event) {
     event.preventDefault();
     const { submitBlog, history, formValues } = this.props;
-    submitBlog(formValues, history);
+    submitBlog(formValues, this.state.file, history);
+    // here we create the presigned URL
   }
   onFileChange(event) {
     this.setState({ file: event.target.files[0] });
